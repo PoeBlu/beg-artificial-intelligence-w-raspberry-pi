@@ -49,7 +49,7 @@ GPIO.add_event_detect(20, GPIO.RISING, callback=quit)
 
 # computer random pick
 computer = randint(1,3)
- 
+
 while True:
 
     if player == computer:
@@ -64,40 +64,36 @@ while True:
             GPIO.output(17,GPIO.HIGH)
             time.sleep(5)
             GPIO.output(17, GPIO.LOW)
-            player = 0
         else:
             # Player wins, rock dulls scissors
             GPIO.output(4,GPIO.HIGH)
             time.sleep(5)
             GPIO.output(4, GPIO.LOW)
-            player = 0
+        player = 0
     elif player == 2:
         if computer == 3:
             # Player loses, scissors cuts paper
             GPIO.output(17,GPIO.HIGH)
             time.sleep(5)
             GPIO.output(17, GPIO.LOW)
-            player = 0
         else:
             # Player wins, paper covers rock
             GPIO.output(4,GPIO.HIGH)
             time.sleep(5)
             GPIO.output(4, GPIO.LOW)
-            player = 0
+        player = 0
     elif player == 3:
         if computer == 1:
             # Player loses, rock dulls scissors
             GPIO.output(17,GPIO.HIGH)
             time.sleep(5)
             GPIO.output(17, GPIO.LOW)
-            player = 0
         else:
             # Player wins, scissors cuts paper
             GPIO.output(4,GPIO.HIGH)
             time.sleep(5)
             GPIO.output(4, GPIO.LOW)
-            player = 0
-   
+        player = 0
     # another random pick for the computer
     computer = randint(1,3)
 

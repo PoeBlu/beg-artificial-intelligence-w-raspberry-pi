@@ -16,7 +16,7 @@ def moveComputer():
         if stickNumber >= 4:
             stickNumber -= removedNumber
             return stickNumber
-        elif (stickNumber == 3) or (stickNumber == 2) or (stickNumber == 1):
+        elif stickNumber in [3, 2, 1]:
             stickNumber = 1
             return stickNumber
 

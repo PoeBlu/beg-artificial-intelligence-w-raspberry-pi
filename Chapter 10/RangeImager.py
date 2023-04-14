@@ -21,7 +21,7 @@ class AggressorController( breve.BraitenbergControl ):
         self.n = 0
         while ( self.n < 10 ):
             breve.createInstances( breve.BraitenbergLight, 1 ).move( breve.vector( ( 20 * breve.breveInternalFunctionFinder.sin( self, ( ( self.n * 6.280000 ) / 10 ) ) ), 1, ( 20 * breve.breveInternalFunctionFinder.cos( self, ( ( self.n * 6.280000 ) / 10 ) ) ) ) )
-            self.n = ( self.n + 1 )
+            self.n += 1
 
         self.vehicle = breve.createInstances( breve.BraitenbergVehicle, 1 )
         self.watch( self.vehicle )

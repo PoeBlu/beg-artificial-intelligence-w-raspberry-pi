@@ -20,7 +20,7 @@ from operator import add
 
 def individual(length, min, max):
     'Create a member of the population.'
-    return [ randint(min,max) for x in xrange(length) ]
+    return [randint(min,max) for _ in xrange(length)]
 
 def population(count, length, min, max):
     """
@@ -32,7 +32,7 @@ def population(count, length, min, max):
     max: the maximum possible value in an individual's list of values
 
     """
-    return [ individual(length, min, max) for x in xrange(count) ]
+    return [individual(length, min, max) for _ in xrange(count)]
 
 def fitness(individual, target):
     """

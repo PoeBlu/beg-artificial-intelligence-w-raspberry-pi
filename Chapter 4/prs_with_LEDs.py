@@ -7,17 +7,17 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(27, GPIO.OUT)
- 
+
 # List the input options
 inputList = ["paper", "rock", "scissors"]
- 
+
 # Random computer pick
 computer = inputList[randint(0,2)]
- 
+
 # Initially set player = False
 player = False
- 
-while player == False:
+
+while not player:
 
     player = raw_input("paper, rock, scissors?")
     if player == computer:
@@ -60,7 +60,7 @@ while player == False:
             GPIO.output(4, GPIO.LOW)
     else:
         print("Invalid input. Please reenter")
-    
+
     # Reset player = False to continue looping    
     player = False
 

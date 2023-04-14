@@ -1,15 +1,15 @@
 from random import randint
- 
+
 # List the input options
 inputList = ["paper", "rock", "scissors"]
- 
+
 # Random computer pick
 computer = inputList[randint(0,2)]
- 
+
 # Initially set player = False
 player = False
- 
-while player == False:
+
+while not player:
 
     player = raw_input("paper, rock, scissors?")
     if player == computer:
@@ -31,7 +31,7 @@ while player == False:
             print("You win ", player, "cuts", computer)
     else:
         print("Invalid input. Please reenter")
-    
+
     # Reset player = False to continue looping    
     player = False
 
